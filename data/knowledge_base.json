@@ -1,0 +1,2295 @@
+{
+ "Tomato_Bacterial_Spot": {
+  "crop": "Tomato",
+  "type": "Disease",
+  "symptoms": "Causal agent: Xanthomonas spp. Small (1–3 mm), water-soaked circular spots appear on leaves, turning dark brown to black often surrounded by a yellow halo; lesions may coalesce causing leaf yellowing and drop. Fruit develops raised, scab-like brownish-black corky spots.",
+  "bn": {
+   "name": "টমেটোর ব্যাকটেরিয়াজনিত দাগ রোগ",
+   "symptoms": "পাতায় ছোট পানিভেজা দাগ, পরে কালচে বাদামি হয়ে চারপাশে হলুদ বলয়; ফলে খসখসে উঁচু দাগ।",
+   "advice": "আক্রান্ত পাতা সরিয়ে ফেলুন, উপর থেকে সেচ দেবেন না। নিবন্ধিত স্ট্রেপ্টোমাইসিন পণ্যের লেবেল 'ব্যাকটেরিয়াল উইল্ট'-এর জন্য, দাগ রোগের জন্য নয়। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: No product labelled for tomato bacterial spot in the PPW list. Nearest labels: streptomycin (labelled for tomato 'bacterial wilt'), bismerthiazol (tomato 'wilt')",
+  "products": [
+   {
+    "brand": "Baha 72SP",
+    "registration": "AP-4724",
+    "dose": "0.2 g/L of water"
+   },
+   {
+    "brand": "Dibectaria 10 SP",
+    "registration": "AP-3634",
+    "dose": "0.5 ml/L of water"
+   }
+  ],
+  "source": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf",
+  "links": [
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_BAND_PLUS_WET",
+   "Window": "daily",
+   "Active_Months": "",
+   "Tmean_lo_C": 24.0,
+   "Tmean_hi_C": 30.0,
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "LEAF_WET or RAIN",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "Tmean BETWEEN 24 AND 30 AND (rain_mm > 0 OR wet_hours >= WET_HOURS_DEFAULT)",
+   "Confidence": "Medium",
+   "Notes": "Source gives no leaf-wetness hours; WET_HOURS_DEFAULT is a project assumption (see Weather_Rule_Guide)."
+  },
+  "spray": {
+   "productClass": "BACTERICIDE",
+   "rainFreeHours": "Follow label",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Tomato_Early_Blight": {
+  "crop": "Tomato",
+  "type": "Disease",
+  "symptoms": "Older leaves first show dark brown/black circular spots with concentric rings; similar lesions may occur on stems and fruit.",
+  "bn": {
+   "name": "টমেটোর আগাম ধসা (আর্লি ব্লাইট) রোগ",
+   "symptoms": "পুরোনো পাতায় প্রথমে গোলাকার কালচে বাদামি দাগ, দাগে চক্রাকার বলয়; কাণ্ড ও ফলেও দাগ হতে পারে।",
+   "advice": "রোগমুক্ত চারা ব্যবহার করুন, আক্রান্ত অংশ নষ্ট করুন। প্রয়োজনে নিবন্ধিত ছত্রাকনাশক (যেমন ম্যানকোজেব) লেবেলের মাত্রায় স্প্রে করুন। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: mancozeb; mancozeb+metalaxyl; chlorothalonil; azoxystrobin+difenoconazole; iprodione; copper hydroxide | Cultural/Non-chemical: Use clean seedlings, remove infected debris. Weather risk: RH max ≥90% (BAMIS tomato calendars).",
+  "products": [
+   {
+    "brand": "McZidan 80 WP",
+    "registration": "AP-465",
+    "dose": "2 g/L water"
+   },
+   {
+    "brand": "Ridomil Gold MZ 68 WG",
+    "registration": "AP-1075",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Pencozeb 80 WP",
+    "registration": "AP-242",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Jazz 80 WP",
+    "registration": "AP-2001",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Deconil 500 EC",
+    "registration": "AP-2114",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Rai 325 SC",
+    "registration": "AP-3111",
+    "dose": "2 ml/L of water"
+   },
+   {
+    "brand": "Curate 50 WP",
+    "registration": "AP-1352",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Win 77 WP",
+    "registration": "AP-1119",
+    "dose": "2 g/L of water"
+   }
+  ],
+  "source": "https://dae.gov.bd/sites/default/files/files/dae.portal.gov.bd/page/8a812db0_3544_4105_b066_df78074d3efb/Registered%20Agricultural%20PesticidesList%20%286%29.pdf ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf ; https://bamis.gov.bd/res/calendars/2023/03/18/26575.pdf ; https://bamis.gov.bd/en/crops/view/13",
+  "links": [
+   {
+    "label": "dae.gov.bd",
+    "url": "https://dae.gov.bd/sites/default/files/files/dae.portal.gov.bd/page/8a812db0_3544_4105_b066_df78074d3efb/Registered%20Agricultural%20PesticidesList%20%286%29.pdf"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://bamis.gov.bd/res/calendars/2023/03/18/26575.pdf"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://bamis.gov.bd/en/crops/view/13"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "RH_THRESHOLD",
+   "Window": "daily",
+   "Active_Months": "11,12,1,2,3,4,5,6,7,8",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": 90.0,
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "RHmax >= 90",
+   "Confidence": "Medium",
+   "Notes": "Both BAMIS calendars agree on RH >= 90%. Rajshahi temperature values (Tmax 30, Tmin 24) and RHmin 85% are printed without a direction; Rabi normals never reach Tmin 24 °C, so they are kept here as reference only and not used in the rule."
+  },
+  "spray": {
+   "productClass": "FUNGICIDE_MIXED_CONTACT_SYSTEMIC; FUNGICIDE_CONTACT; FUNGICIDE_SYSTEMIC",
+   "rainFreeHours": "24",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Tomato_Late_Blight": {
+  "crop": "Tomato",
+  "type": "Disease",
+  "symptoms": "Pale-green or irregular water-soaked leaf patches enlarge rapidly in cloudy/foggy weather, turn brown to black; stems may also show symptoms and plants can blight rapidly.",
+  "bn": {
+   "name": "টমেটোর নাবি ধসা (লেট ব্লাইট) রোগ",
+   "symptoms": "পাতায় পানিভেজা ফ্যাকাশে দাগ, মেঘলা/কুয়াশায় দ্রুত বেড়ে বাদামি-কালো হয়; গাছ দ্রুত ঝলসে যায়।",
+   "advice": "কুয়াশা ও ঠান্ডা-আর্দ্র আবহাওয়ায় নজর রাখুন। নিবন্ধিত ছত্রাকনাশক (ম্যানকোজেব, সাইমোক্সানিল+ম্যানকোজেব ইত্যাদি) লেবেলের মাত্রায় স্প্রে করুন। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: mancozeb; mancozeb+cymoxanil; benalaxyl+mancozeb; copper hydroxide; copper oxychloride; tri-basic copper sulphate | Cultural/Non-chemical: Watch fields in cool, humid, foggy weather; remove infected plants. Weather risk: 15–27 °C with RH 75–90%+ (BAMIS calendar).",
+  "products": [
+   {
+    "brand": "Cymongold 72 WP",
+    "registration": "AP-1688",
+    "dose": "1.5 g/L of water"
+   },
+   {
+    "brand": "Galben M",
+    "registration": "AP-374",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Cozeb 80 WP",
+    "registration": "AP-448",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Cuproxat 345 SC",
+    "registration": "AP-2113",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Topgun 50 DF",
+    "registration": "AP-974",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Jazz 80 WP",
+    "registration": "AP-2001",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Win 77 WP",
+    "registration": "AP-1119",
+    "dose": "2 g/L of water"
+   }
+  ],
+  "source": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf ; https://bamis.gov.bd/res/calendars/2023/03/15/26442.pdf",
+  "links": [
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://bamis.gov.bd/res/calendars/2023/03/15/26442.pdf"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_RH_BAND_OR_HUTTON",
+   "Window": "daily",
+   "Active_Months": "12,1,2,3,4",
+   "Tmean_lo_C": 15.0,
+   "Tmean_hi_C": 27.0,
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": 10.0,
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": 75.0,
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": 6.0,
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": 2.0,
+   "Risk_Logic": "(Tmean BETWEEN 15 AND 27 AND RHmean >= 75)  OR  (Hutton: Tmin >= 10 AND RH90_hours >= 6 on each of 2 consecutive days)",
+   "Confidence": "High",
+   "Notes": "Tmin_lo, RH90_hours and consecutive days belong to the Hutton branch only. Hutton was developed for potato in Great Britain; apply as a secondary trigger."
+  },
+  "spray": {
+   "productClass": "FUNGICIDE_MIXED_CONTACT_SYSTEMIC; FUNGICIDE_CONTACT",
+   "rainFreeHours": "24",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Tomato_Leaf_Mold": {
+  "crop": "Tomato",
+  "type": "Disease",
+  "symptoms": "Causal agent: Passalora fulva (syn. Fulvia fulva). Pale greenish-yellow spots with indefinite margins appear on the upper leaf surface, corresponding to olive-green to greyish-purple velvety fungal growth on the lower leaf surface; severely affected leaves curl, wither, and drop prematurely.",
+  "bn": {
+   "name": "টমেটোর পাতার ছাঁচ (লিফ মোল্ড) রোগ",
+   "symptoms": "পাতার উপরে হালকা হলুদ দাগ, নিচে জলপাই-সবুজ মখমলের মতো ছত্রাক; পাতা কুঁকড়ে ঝরে পড়ে।",
+   "advice": "গাছের ফাঁকে বাতাস চলাচল বাড়ান, পাতা ভেজাবেন না। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: No product labelled for tomato leaf mold found in the PPW list | Cultural/Management: NO Bangladesh source found - confirm with Upazila Agriculture Officer / BARI Plant Pathology before using",
+  "products": [],
+  "source": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf",
+  "links": [
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "RH_THRESHOLD",
+   "Window": "daily",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": 85.0,
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "LEAF_WET",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "RHmean >= 85",
+   "Confidence": "Medium",
+   "Notes": "Mostly a protected-cultivation disease; source gives no temperature range."
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Tomato_Septoria_Leaf_Spot": {
+  "crop": "Tomato",
+  "type": "Disease",
+  "symptoms": "Causal agent: Septoria lycopersici. Numerous small (2–3 mm) circular spots with dark brown borders and light grey or tan centres containing tiny black fruiting bodies (pycnidia) appear first on older lower leaves, causing progressive yellowing and defoliation.",
+  "bn": {
+   "name": "টমেটোর সেপ্টোরিয়া পাতা দাগ রোগ",
+   "symptoms": "নিচের পুরোনো পাতায় ছোট গোল দাগ, কিনারা গাঢ় বাদামি ও মাঝখান ধূসর, ভেতরে কালো বিন্দু; পাতা হলুদ হয়ে ঝরে।",
+   "advice": "আক্রান্ত নিচের পাতা সরান, ফসলের অবশিষ্টাংশ নষ্ট করুন। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: No product labelled for tomato Septoria found in the PPW list | Cultural/Management: NO Bangladesh source found - confirm with Upazila Agriculture Officer / BARI Plant Pathology before using",
+  "products": [],
+  "source": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf",
+  "links": [
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_BAND_PLUS_WET",
+   "Window": "daily",
+   "Active_Months": "",
+   "Tmean_lo_C": 20.0,
+   "Tmean_hi_C": 25.0,
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "LEAF_WET or RAIN",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "Tmean BETWEEN 20 AND 25 AND (rain_mm > 0 OR wet_hours >= WET_HOURS_DEFAULT)",
+   "Confidence": "Medium",
+   "Notes": "Source gives no wetness duration; WET_HOURS_DEFAULT is a project assumption."
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Tomato_Spider_Mites_Two-spotted_Spider_Mite": {
+  "crop": "Tomato",
+  "type": "Pest",
+  "symptoms": "Causal pest: Tetranychus urticae. Fine yellow or whitish stippling appears on upper leaf surfaces due to mite feeding; leaves turn bronzed or papery, and fine silken webbing is visible on undersides and shoots during severe infestations.",
+  "bn": {
+   "name": "টমেটোর দুই-দাগি মাকড় (স্পাইডার মাইট)",
+   "symptoms": "পাতায় সূক্ষ্ম হলুদ/সাদা ফুটকি, পাতা ব্রোঞ্জ বা কাগজের মতো হয়; পাতার নিচে সূক্ষ্ম জাল।",
+   "advice": "গরম-শুষ্ক আবহাওয়ায় পাতার নিচে নজর রাখুন, গাছে পানির ঘাটতি রাখবেন না। টমেটোর জন্য নিবন্ধিত মাকড়নাশক পাওয়া যায়নি; উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: Registered miticides in the list are labelled for tea, jute, brinjal, cotton, not tomato (propargite, hexythiazox, fenpropathrin, ethion). No tomato label found | Cultural/Management: NO Bangladesh source found - confirm with Upazila Agriculture Officer / BARI Plant Pathology before using",
+  "products": [],
+  "source": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf",
+  "links": [
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "HOT_DRY",
+   "Window": "daily",
+   "Active_Months": "",
+   "Tmean_lo_C": 26.7,
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": 40.0,
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "DRY",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "Tmean >= 26.7 AND RHmean <= 40",
+   "Confidence": "Medium",
+   "Notes": "UMass figures are from a greenhouse fact sheet. Bangladesh RH is rarely <= 40%, so this rule will seldom trigger; consider a dry-spell variant after validation."
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Tomato_Target_Spot": {
+  "crop": "Tomato",
+  "type": "Disease",
+  "symptoms": "Causal agent: Corynespora cassiicola. Small water-soaked spots enlarge into brown lesions with characteristic concentric target-like rings and yellow haloes on leaves, stems, and fruit; severe foliar infection leads to premature leaf drop.",
+  "bn": {
+   "name": "টমেটোর টার্গেট স্পট (চক্রাকার দাগ) রোগ",
+   "symptoms": "ছোট পানিভেজা দাগ বড় হয়ে বাদামি চক্রাকার দাগ ও হলুদ বলয়; বেশি হলে পাতা ঝরে যায়।",
+   "advice": "আক্রান্ত পাতা সরান, ঘন করে লাগাবেন না। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: No product labelled for tomato target spot found in the PPW list | Cultural/Management: NO Bangladesh source found - confirm with Upazila Agriculture Officer / BARI Plant Pathology before using",
+  "products": [],
+  "source": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf",
+  "links": [
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_BAND_PLUS_WET",
+   "Window": "daily",
+   "Active_Months": "",
+   "Tmean_lo_C": 20.0,
+   "Tmean_hi_C": 28.0,
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "LEAF_WET",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "Tmean BETWEEN 20 AND 28 AND wet_hours >= WET_HOURS_DEFAULT",
+   "Confidence": "Low",
+   "Notes": "The UF/IFAS PP351 page could not be machine-read in this pass; numbers come from the trade article. Read PP351 to upgrade."
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Tomato_Tomato_Yellow_Leaf_Curl_Virus": {
+  "crop": "Tomato",
+  "type": "Viral disease",
+  "symptoms": "Plants become stunted; leaves curl and develop wavy margins, older leaves become thick and brittle; excessive branching and poor flower/fruit set may occur.",
+  "bn": {
+   "name": "টমেটোর হলুদ পাতা কোঁকড়ানো ভাইরাস রোগ",
+   "symptoms": "গাছ খাটো হয়, পাতা কুঁকড়ে কিনারা ঢেউখেলানো ও হলুদ হয়; ফুল-ফল কম ধরে।",
+   "advice": "ভাইরাসের কোনো ওষুধ নেই। সাদা মাছি দমন করুন, আক্রান্ত গাছ তুলে ফেলুন, সহনশীল জাত লাগান; বীজ শোধনে নিবন্ধিত ইমিডাক্লোপ্রিড লেবেল অনুযায়ী। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: Vector control only: imidacloprid seed treatment (tomato whitefly label); BARI trial package used cyantraniliprole seed treatment (Fortenza 60 FS) | Cultural/Non-chemical: Control whitefly, rogue out infected plants, grow tolerant varieties. No chemical cures the virus.",
+  "products": [
+   {
+    "brand": "Imivax 48FS",
+    "registration": "AP-3762",
+    "dose": "10 ml/kg seed"
+   }
+  ],
+  "source": "https://www.banglajol.info/index.php/BJAR/article/view/92526/59995 ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf ; https://banglajol.info/index.php/BJAR/article/view/30693/20630 ; https://bamis.gov.bd/en/crops/view/13",
+  "links": [
+   {
+    "label": "banglajol.info",
+    "url": "https://www.banglajol.info/index.php/BJAR/article/view/92526/59995"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   },
+   {
+    "label": "banglajol.info",
+    "url": "https://banglajol.info/index.php/BJAR/article/view/30693/20630"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://bamis.gov.bd/en/crops/view/13"
+   }
+  ],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "VECTOR_INFO_ONLY",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "Not used for automated risk. Show whitefly-monitoring advice instead.",
+   "Confidence": "Low",
+   "Notes": "Fitted optimum (28.65 °C, 73.14% RH) is a regression peak from one season, not a threshold."
+  },
+  "spray": {
+   "productClass": "SEED_TREATMENT",
+   "rainFreeHours": "Not applicable",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Tomato_healthy": {
+  "crop": "Tomato",
+  "type": "Healthy",
+  "symptoms": "No disease symptoms expected; healthy leaves, stems and fruits without the target disease signs. Image-class label should not be treated as a field diagnosis.",
+  "bn": {
+   "name": "সুস্থ টমেটো গাছ",
+   "symptoms": "রোগের লক্ষণ নেই।",
+   "advice": "কোনো ওষুধ লাগবে না; নিয়মিত পর্যবেক্ষণ করুন।"
+  },
+  "management": "No medicine required. Cultural practice: Routine monitoring",
+  "products": [],
+  "source": "Dataset class label — no pesticide applicable",
+  "links": [],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "NONE",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "None",
+   "Confidence": "Not applicable",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Rice_Blast": {
+  "crop": "Rice",
+  "type": "Disease",
+  "symptoms": "Leaf blast: small oval/diamond-shaped grey or whitish lesions with dark-brown margins that enlarge into eye-shaped spots. Node blast causes dark lesions and rotting at nodes; neck/panicle blast causes blackening/rotting at the panicle base and blank grains.",
+  "bn": {
+   "name": "ধানের ব্লাস্ট রোগ",
+   "symptoms": "পাতায় চোখের মতো ধূসর দাগ ও বাদামি কিনারা; গিঁটে বা শীষের গোড়ায় কালো হয়ে পচে, শীষ চিটা হয়।",
+   "advice": "অতিরিক্ত ইউরিয়া দেবেন না। প্রয়োজনে নিবন্ধিত ছত্রাকনাশক (যেমন ট্রাইসাইক্লাজোল) বিকেলে ৭–১০ দিন পরপর দুবার স্প্রে করুন (BRRI)। শীষ ব্লাস্ট দেখা দিলে আর সারানো যায় না। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: tricyclazole; tebuconazole+trifloxystrobin; propiconazole+tricyclazole; tricyclazole+hexaconazole; azoxystrobin+difenoconazole; hexaconazole; edifenphos; bismerthiazol | Cultural/Non-chemical: BRRI: avoid excess nitrogen, balanced P and K, wider spacing, clean seed, resistant varieties; spray twice 7-10 days apart in the afternoon; neck blast cannot be cured once it appears.",
+  "products": [
+   {
+    "brand": "Trooper 75 WP",
+    "registration": "AP-985",
+    "dose": "400 g (per ha)"
+   },
+   {
+    "brand": "Nativo 75 WP",
+    "registration": "AP-1502",
+    "dose": "300 g (per ha)"
+   },
+   {
+    "brand": "Filia 525 SE",
+    "registration": "AP-2313",
+    "dose": "1.00 L (per ha)"
+   },
+   {
+    "brand": "Murate 25 SC",
+    "registration": "AP-3574",
+    "dose": "500 ml (per ha)"
+   },
+   {
+    "brand": "Trihex 25SC",
+    "registration": "AP-3917",
+    "dose": "500 ml (per ha)"
+   },
+   {
+    "brand": "Amistar Top",
+    "registration": "AP-2312",
+    "dose": "1 ml/L of water"
+   },
+   {
+    "brand": "Hayconazol 5 EC",
+    "registration": "AP-713",
+    "dose": "500 ml (per ha)"
+   },
+   {
+    "brand": "Edifen 50 EC",
+    "registration": "AP-268",
+    "dose": "850 ml (per ha)"
+   },
+   {
+    "brand": "Bactroban 20WP",
+    "registration": "AP-4218",
+    "dose": "450 g (per ha)"
+   }
+  ],
+  "source": "https://www.bamis.gov.bd/en/diseases/1/all/76/ ; https://brri.portal.gov.bd/sites/default/files/files/brri.portal.gov.bd/news/245bba32_a089_4da8_9845_d9afcddf455f/2023-04-05-05-24-b9fb45272dcf3a51acb0e89254944725.pdf ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf ; https://banglajol.info/index.php/BRJ/article/view/55177",
+  "links": [
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/en/diseases/1/all/76/"
+   },
+   {
+    "label": "brri.portal.gov.bd",
+    "url": "https://brri.portal.gov.bd/sites/default/files/files/brri.portal.gov.bd/news/245bba32_a089_4da8_9845_d9afcddf455f/2023-04-05-05-24-b9fb45272dcf3a51acb0e89254944725.pdf"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   },
+   {
+    "label": "banglajol.info",
+    "url": "https://banglajol.info/index.php/BRJ/article/view/55177"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_RH_BAND",
+   "Window": "daily",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": 25.0,
+   "Tmax_hi_C": 30.0,
+   "Tmin_lo_C": 16.0,
+   "Tmin_hi_C": 20.0,
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": 90.0,
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "Tmin BETWEEN 16 AND 20 AND Tmax BETWEEN 25 AND 30 AND RHmax >= 90",
+   "Confidence": "High",
+   "Notes": "Daily Tmin/Tmax are used as proxies for the 10-hour night/day temperatures. BAMIS says 'RH above 90%' without saying mean or max; RHmax is used here."
+  },
+  "spray": {
+   "productClass": "FUNGICIDE_SYSTEMIC; FUNGICIDE_OTHER; BACTERICIDE",
+   "rainFreeHours": "2",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Rice_Brownspot": {
+  "crop": "Rice",
+  "type": "Disease",
+  "symptoms": "Small sesame-seed-like brown spots first appear on leaves; spots may increase and cover much of the leaf, causing yellowing/browning and plant decline.",
+  "bn": {
+   "name": "ধানের বাদামি দাগ রোগ",
+   "symptoms": "পাতায় তিলের দানার মতো ছোট বাদামি দাগ; বেশি হলে পাতা হলুদ-বাদামি হয়ে যায়।",
+   "advice": "সুষম সার দিন (BRRI)। বীজ শোধনে নিবন্ধিত পণ্য লেবেল অনুযায়ী ব্যবহার করুন। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: seed treatment: carboxin+thiram+carbendazim (Provax 200 WP, VitaFlo 200 FF); carbendazim (Freshcozim). Field trial: azoxystrobin 0.1%, propiconazole (Tilt 250 EC) 0.1% | Cultural/Non-chemical: BRRI: balanced urea fertilisation manages brown spot.",
+  "products": [
+   {
+    "brand": "Provax 200 WP",
+    "registration": "AP-1146",
+    "dose": "3 g/kg seed"
+   },
+   {
+    "brand": "VitaFlo 200 FF",
+    "registration": "AP-1611",
+    "dose": "5 ml/kg seed"
+   },
+   {
+    "brand": "Freshcozim 50 WP",
+    "registration": "AP-2785",
+    "dose": "2.5 g/kg seeds"
+   }
+  ],
+  "source": "https://banglajol.info/index.php/BRJ/article/view/55177 ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf ; https://nepjol.info/index.php/IJASBT/article/download/11977/9998/43033",
+  "links": [
+   {
+    "label": "banglajol.info",
+    "url": "https://banglajol.info/index.php/BRJ/article/view/55177"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   },
+   {
+    "label": "nepjol.info",
+    "url": "https://nepjol.info/index.php/IJASBT/article/download/11977/9998/43033"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_BAND",
+   "Window": "daily",
+   "Active_Months": "",
+   "Tmean_lo_C": 28.0,
+   "Tmean_hi_C": 30.0,
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "Tmean BETWEEN 28 AND 30 AND humid/cloudy (no numeric RH given by BAMIS)",
+   "Confidence": "Medium",
+   "Notes": "BAMIS gives no RH number. Do not invent one; optionally require cloud_cover high once validated."
+  },
+  "spray": {
+   "productClass": "SEED_TREATMENT",
+   "rainFreeHours": "Not applicable",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Rice_Tungro": {
+  "crop": "Rice",
+  "type": "Viral disease",
+  "symptoms": "Initially, pale-green and pale-yellow streaks run along leaf veins; leaves later turn yellow to orange-yellow. Infected plants are often stunted.",
+  "bn": {
+   "name": "ধানের টুংরো রোগ",
+   "symptoms": "পাতা শিরা বরাবর হলুদ/কমলা-হলুদ হয়, গাছ খাটো হয়ে যায়।",
+   "advice": "ভাইরাসের ওষুধ নেই। সবুজ পাতাফড়িং দমন করুন, বীজতলা রক্ষা করুন, সহনশীল জাত (BRRI) লাগান। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: Vector control only: dimethoate, chlorpyrifos, isoprocarb, malathion, quinalphos, fenitrothion (labelled for green leafhopper) | Cultural/Non-chemical: Use tolerant varieties (BR8 for Aus, BRRI dhan37 for T. Aman per BRRI); BRRI 2024 finds infected seedbeds seed field outbreaks, so protect seedbeds.",
+  "products": [
+   {
+    "brand": "Rogor 40 L",
+    "registration": "AP-141",
+    "dose": "1.12 L (per ha)"
+   },
+   {
+    "brand": "Chlorocid 20 EC",
+    "registration": "AP-466",
+    "dose": "1.00 L (per ha)"
+   },
+   {
+    "brand": "Mipcin 75 WP",
+    "registration": "AP-539",
+    "dose": "1.12 kg (per ha)"
+   },
+   {
+    "brand": "Sumady 57 EC",
+    "registration": "AP-311",
+    "dose": "1.00 L (per ha)"
+   },
+   {
+    "brand": "Sinolux 25 EC",
+    "registration": "AP-517",
+    "dose": "1.50 L (per ha)"
+   },
+   {
+    "brand": "Edthion 50 EC",
+    "registration": "AP-196",
+    "dose": "1.00 L (per ha)"
+   }
+  ],
+  "source": "https://banglajol.info/index.php/BRJ/article/view/55177 ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf ; https://banglajol.info/index.php/BRJ/article/view/37390/25313 ; https://www.banglajol.info/index.php/BRJ/article/view/86756",
+  "links": [
+   {
+    "label": "banglajol.info",
+    "url": "https://banglajol.info/index.php/BRJ/article/view/55177"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   },
+   {
+    "label": "banglajol.info",
+    "url": "https://banglajol.info/index.php/BRJ/article/view/37390/25313"
+   },
+   {
+    "label": "banglajol.info",
+    "url": "https://www.banglajol.info/index.php/BRJ/article/view/86756"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "VECTOR_PROXY",
+   "Window": "30-day mean",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": 25.0,
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": 17.0,
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "30-day mean Tmax > 25 AND 30-day mean Tmin < 17 (low-weight indicator; combine with leafhopper monitoring)",
+   "Confidence": "Low",
+   "Notes": "Authors state correlations are weak; treat as a supporting signal only. Evening RH 70% recorded in notes, not in the rule."
+  },
+  "spray": {
+   "productClass": "INSECTICIDE_ORGANOPHOSPHATE; INSECTICIDE_CARBAMATE",
+   "rainFreeHours": "6",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Rice_bacterial_leaf_blight": {
+  "crop": "Rice",
+  "type": "Disease",
+  "symptoms": "Depending on plant age, symptoms include kresek/wilting of young plants, leaf blight, or pale-yellowing. Lower leaves droop, dry and die; severe infection may affect all leaves in a hill.",
+  "bn": {
+   "name": "ধানের ব্যাকটেরিয়াজনিত পাতা পোড়া রোগ",
+   "symptoms": "পাতার আগা ও কিনারা থেকে হলুদ হয়ে শুকিয়ে যায়; চারা অবস্থায় গাছ ঢলে পড়ে (ক্রিসেক)।",
+   "advice": "ঝড়-বৃষ্টির পর ইউরিয়া দেবেন না, পটাশ ও জিপসাম দিন, কয়েক দিন পানি সরিয়ে রাখুন (BRRI)। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: bismerthiazol (Bactroban 20 WP); copper (Cupravit 0.2%) in BAU trial | Cultural/Non-chemical: BRRI: after storm, no urea; potash + gypsum; drain field for a few days; avoid excess nitrogen.",
+  "products": [
+   {
+    "brand": "Bactroban 20WP",
+    "registration": "AP-4218",
+    "dose": "450 g (per ha)"
+   }
+  ],
+  "source": "https://brri.portal.gov.bd/sites/default/files/files/brri.portal.gov.bd/news/245bba32_a089_4da8_9845_d9afcddf455f/2023-04-05-05-24-b9fb45272dcf3a51acb0e89254944725.pdf ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf ; https://banglajol.info/index.php/BJAR/article/view/34503/23274 ; https://banglajol.info/index.php/BRJ/article/view/55177",
+  "links": [
+   {
+    "label": "brri.portal.gov.bd",
+    "url": "https://brri.portal.gov.bd/sites/default/files/files/brri.portal.gov.bd/news/245bba32_a089_4da8_9845_d9afcddf455f/2023-04-05-05-24-b9fb45272dcf3a51acb0e89254944725.pdf"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   },
+   {
+    "label": "banglajol.info",
+    "url": "https://banglajol.info/index.php/BJAR/article/view/34503/23274"
+   },
+   {
+    "label": "banglajol.info",
+    "url": "https://banglajol.info/index.php/BRJ/article/view/55177"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_RH_RAIN",
+   "Window": "7-day for rain; daily for T/RH",
+   "Active_Months": "",
+   "Tmean_lo_C": 28.0,
+   "Tmean_hi_C": 30.0,
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": 80.0,
+   "RHmean_hi_pct": 90.0,
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": 30.0,
+   "Wet_Condition": "RAIN",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "Tmean BETWEEN 28 AND 30 AND RHmean BETWEEN 80 AND 90 AND rain_7day_mm > 30",
+   "Confidence": "High",
+   "Notes": "BAMIS does not state the rainfall period; a 7-day total is a project assumption matching BAMIS weekly calendars. Storms/strong wind increase spread (also BRRI advice already in the row)."
+  },
+  "spray": {
+   "productClass": "BACTERICIDE",
+   "rainFreeHours": "Follow label",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Rice_bacterial_leaf_streak": {
+  "crop": "Rice",
+  "type": "Disease",
+  "symptoms": "Causal agent: Xanthomonas oryzae pv. oryzicola. Narrow, dark-green water-soaked translucent streaks appear between leaf veins, later turning yellow-orange; tiny yellow bacterial exudate beads form on streak surfaces under humid conditions.",
+  "bn": {
+   "name": "ধানের ব্যাকটেরিয়াজনিত পাতার রেখা রোগ",
+   "symptoms": "শিরার মাঝে সরু পানিভেজা স্বচ্ছ রেখা, পরে হলুদ-কমলা হয়; রেখায় হলুদ পুঁতির মতো ফোঁটা।",
+   "advice": "কম সংবেদনশীল BRRI হাইব্রিড/জাত লাগান। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: None named (no bactericide named by BRRI; none labelled in PPW list) | Cultural/Management: BRRI: now graded a major disease, more severe in hybrids; grow BRRI-released hybrids less susceptible to BLB/BLS.",
+  "products": [],
+  "source": "https://banglajol.info/index.php/BRJ/article/view/55177",
+  "links": [
+   {
+    "label": "banglajol.info",
+    "url": "https://banglajol.info/index.php/BRJ/article/view/55177"
+   }
+  ],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "QUALITATIVE_ONLY",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "No numeric rule. Show qualitative warning in hot humid weather.",
+   "Confidence": "Low",
+   "Notes": "Do not borrow bacterial leaf blight thresholds; they are a different pathovar."
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Rice_bacterial_panicle_blight": {
+  "crop": "Rice",
+  "type": "Disease",
+  "symptoms": "Causal agent: Burkholderia glumae / B. gladioli. Discoloration and rotting of developing spikelets/grains from the panicle base upward; grains become straw-coloured or greyish-brown and unfilled, while the panicle rachis often remains green.",
+  "bn": {
+   "name": "ধানের ব্যাকটেরিয়াজনিত শীষ ঝলসানো রোগ",
+   "symptoms": "শীষের দানা গোড়া থেকে বিবর্ণ ও পচে খড়ের রঙ বা ধূসর-বাদামি হয়, দানা চিটা; শীষের দণ্ড সবুজ থাকে।",
+   "advice": "রোগটি বীজবাহিত, তাই সুস্থ বীজ ব্যবহার করুন। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: None found | Cultural/Management: NO Bangladesh source found - confirm with Upazila Agriculture Officer / BARI Plant Pathology before using",
+  "products": [],
+  "source": "https://www.pubmed.gov/37221243/ ; https://www.banglajol.info/index.php/ABA/article/view/81233",
+  "links": [
+   {
+    "label": "pubmed.gov",
+    "url": "https://www.pubmed.gov/37221243/"
+   },
+   {
+    "label": "banglajol.info",
+    "url": "https://www.banglajol.info/index.php/ABA/article/view/81233"
+   }
+  ],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "NONE",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "No rule until a source is read and verified.",
+   "Confidence": "Not available",
+   "Notes": "Page could not be machine-read; do not use until checked."
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Rice_dead_heart": {
+  "crop": "Rice",
+  "type": "Pest damage / symptom",
+  "symptoms": "Central/dead-heart leaf dries and dies after stem-borer larvae feed inside the stem; entry holes and insect frass may be visible on affected stems.",
+  "bn": {
+   "name": "ধানের মরা ডিগ (মাজরা পোকার ক্ষতি)",
+   "symptoms": "মাঝের কচি পাতা শুকিয়ে মরে যায়, টান দিলে উঠে আসে; কাণ্ডে ছিদ্র ও পোকার মল দেখা যায়।",
+   "advice": "আলোক ফাঁদ ও নিয়মিত পর্যবেক্ষণ করুন। প্রয়োজনে নিবন্ধিত দানাদার বা স্প্রে কীটনাশক লেবেলের মাত্রায় ব্যবহার করুন। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: carbofuran; carbosulfan; cartap; diazinon; chlorpyrifos; fipronil; chlorantraniliprole | Cultural/Non-chemical: BAU trial: neem + mahogany oil gave best result among botanicals; Diatone 10G (diazinon) among chemicals.",
+  "products": [
+   {
+    "brand": "Furacarb 3G",
+    "registration": "AP-214",
+    "dose": "16.80 kg (per ha)"
+   },
+   {
+    "brand": "Katap 50 SP",
+    "registration": "AP-421",
+    "dose": "1.40 kg (per ha)"
+   },
+   {
+    "brand": "Marshal 20 EC",
+    "registration": "AP-91",
+    "dose": "1.50 L (per ha)"
+   },
+   {
+    "brand": "Diatone 10G",
+    "registration": "AP-130",
+    "dose": "16.80 kg (per ha)"
+   },
+   {
+    "brand": "Ferterra 0.4G",
+    "registration": "AP-1638",
+    "dose": "10.00 kg (per ha)"
+   },
+   {
+    "brand": "Goolee 3GR",
+    "registration": "AP-778",
+    "dose": "10.00 kg (per ha)"
+   },
+   {
+    "brand": "Classic 20 EC",
+    "registration": "AP-345",
+    "dose": "1.00 L (per ha)"
+   }
+  ],
+  "source": "https://ageconsearch.umn.edu/record/235279/files/4.%20JBAU%20742-15.pdf ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf",
+  "links": [
+   {
+    "label": "ageconsearch.umn.edu",
+    "url": "https://ageconsearch.umn.edu/record/235279/files/4.%20JBAU%20742-15.pdf"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_RH_BAND",
+   "Window": "daily",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": 29.5,
+   "Tmax_hi_C": 34.7,
+   "Tmin_lo_C": 20.3,
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": 84.0,
+   "RHmin_lo_pct": 38.7,
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "DRY",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "Tmin > 20.3 AND Tmax BETWEEN 29.5 AND 34.7 AND RHmax > 84 AND RHmin > 38.7 AND rain_mm == 0",
+   "Confidence": "Medium",
+   "Notes": "Morning RH ≈ daily RHmax and afternoon RH ≈ daily RHmin (proxy assumption). Indian study (ICAR IJAgS 2025) supports a positive link of dead heart with minimum temperature and afternoon RH."
+  },
+  "spray": {
+   "productClass": "GRANULAR; INSECTICIDE_OTHER; INSECTICIDE_CARBAMATE; INSECTICIDE_ORGANOPHOSPHATE",
+   "rainFreeHours": "6",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Rice_downy_mildew": {
+  "crop": "Rice",
+  "type": "Class identity needs confirmation",
+  "symptoms": "Causal agent: Sclerophthora macrospora. Chlorotic yellow-white mottling or streaking on young leaves, stunting, excessive tillering, and twisted, distorted leaves and panicles ('crazy top' symptom).",
+  "bn": {
+   "name": "ধানের ডাউনি মিলডিউ রোগ",
+   "symptoms": "কচি পাতায় হলুদ-সাদা ছোপ বা রেখা, গাছ খাটো, অতিরিক্ত কুশি, পাতা ও শীষ মোচড়ানো।",
+   "advice": "শ্রেণিটির পরিচয় যাচাই প্রয়োজন। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: None found | Cultural/Management: NO Bangladesh source found - confirm with Upazila Agriculture Officer / BARI Plant Pathology before using",
+  "products": [],
+  "source": "No Bangladesh official product registration found in checked sources",
+  "links": [],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "NONE",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "No rule.",
+   "Confidence": "Not available",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Rice_hispa": {
+  "crop": "Rice",
+  "type": "Pest",
+  "symptoms": "Adult beetles scrape leaf surfaces, leaving whitish streaks; grubs mine inside leaves, producing white, papery patches. Bangladesh official source for this exact class symptom still needs a direct page check.",
+  "bn": {
+   "name": "ধানের পামরি পোকা",
+   "symptoms": "পূর্ণবয়স্ক পোকা পাতা চেঁছে সাদা লম্বা দাগ করে; কীড়া পাতার ভেতরে সুড়ঙ্গ করে সাদা ফোসকা করে।",
+   "advice": "পাতার আগা কেটে ফেলুন ও হাতজাল ব্যবহার করুন। প্রয়োজনে নিবন্ধিত কীটনাশক লেবেলের মাত্রায় স্প্রে করুন। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: acephate; carbaryl; dimethoate; quinalphos; fipronil; malathion | Cultural/Non-chemical: Neem oil 2 ml/100 ml was the best botanical in a Bangladesh trial.",
+  "products": [
+   {
+    "brand": "Banish 75 SP",
+    "registration": "AP-569",
+    "dose": "750 g (per ha)"
+   },
+   {
+    "brand": "Expose 85 WP",
+    "registration": "AP-2205",
+    "dose": "1.34 kg (per ha)"
+   },
+   {
+    "brand": "Rogor 40 L",
+    "registration": "AP-141",
+    "dose": "1.12 L (per ha)"
+   },
+   {
+    "brand": "Quilux 25 EC",
+    "registration": "AP-536",
+    "dose": "1.00 L (per ha)"
+   },
+   {
+    "brand": "Goolee 50 SC",
+    "registration": "AP-779",
+    "dose": "500 ml (per ha)"
+   },
+   {
+    "brand": "Malamar 57 EC",
+    "registration": "AP-231",
+    "dose": "1.00 L (per ha)"
+   }
+  ],
+  "source": "https://banglajol.info/index.php/PA/article/view/33466 ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf",
+  "links": [
+   {
+    "label": "banglajol.info",
+    "url": "https://banglajol.info/index.php/PA/article/view/33466"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_RH_BAND",
+   "Window": "daily",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": 32.0,
+   "Tmax_hi_C": 35.0,
+   "Tmin_lo_C": 24.0,
+   "Tmin_hi_C": 26.0,
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": 96.0,
+   "RHmin_lo_pct": 75.0,
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "Tmax BETWEEN 32 AND 35 AND Tmin BETWEEN 24 AND 26 AND RHmax >= 96 AND RHmin BETWEEN 75 AND 81",
+   "Confidence": "High",
+   "Notes": "RHmin upper bound 81% is in the logic string (no separate column)."
+  },
+  "spray": {
+   "productClass": "INSECTICIDE_ORGANOPHOSPHATE; INSECTICIDE_CARBAMATE; INSECTICIDE_OTHER",
+   "rainFreeHours": "6",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Rice_normal": {
+  "crop": "Rice",
+  "type": "Healthy",
+  "symptoms": "No target disease symptoms expected; healthy rice plants. This is a dataset healthy class, not a disease.",
+  "bn": {
+   "name": "সুস্থ ধান গাছ",
+   "symptoms": "রোগের লক্ষণ নেই।",
+   "advice": "কোনো ওষুধ লাগবে না; নিয়মিত পর্যবেক্ষণ করুন।"
+  },
+  "management": "No medicine required. Cultural practice: Routine monitoring",
+  "products": [],
+  "source": "Dataset class label — no pesticide applicable",
+  "links": [],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "NONE",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "None",
+   "Confidence": "Not applicable",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Potato_Black_Scurf": {
+  "crop": "Potato",
+  "type": "Disease",
+  "symptoms": "Causal agent: Rhizoctonia solani. Hard, irregular dark-brown to black resting bodies (sclerotia, 'dirt that will not wash off') adhere to tuber skin; sunken reddish-brown stem cankers may girdle underground sprouts and cause aerial tuber formation.",
+  "bn": {
+   "name": "আলুর কালো দাদ (ব্ল্যাক স্কার্ফ) রোগ",
+   "symptoms": "আলুর গায়ে শক্ত কালো মাটির দলার মতো দাগ যা ধুলেও ওঠে না; কাণ্ডে লালচে-বাদামি ক্ষত।",
+   "advice": "রোগমুক্ত বীজ আলু ব্যবহার করুন, শস্য পর্যায় মানুন। বীজ আলু শোধনে নিবন্ধিত পণ্য লেবেল অনুযায়ী। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: seed treatment: carboxin+thiram+carbendazim (Provax 200 WP, VitaFlo 200 FF); trial: azoxystrobin soil drench 0.10% + poultry manure 5 t/ha | Cultural/Non-chemical: Clean seed tubers, crop rotation; field fungicides alone often work poorly in Bangladesh.",
+  "products": [
+   {
+    "brand": "Provax 200 WP",
+    "registration": "AP-1146",
+    "dose": "2.5 g/L of water"
+   },
+   {
+    "brand": "VitaFlo 200 FF",
+    "registration": "AP-1611",
+    "dose": "3.5 ml/kg seed"
+   }
+  ],
+  "source": "https://ptsldigital.ukm.my/bitstream/123456789/578659/1/ukmvital_116107%2bSource01%2bSource010.PDF ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf ; https://akhtarul1984.blogspot.com/2014/05/major-diseases-and-control-measures-of.html",
+  "links": [
+   {
+    "label": "ptsldigital.ukm.my",
+    "url": "https://ptsldigital.ukm.my/bitstream/123456789/578659/1/ukmvital_116107%2bSource01%2bSource010.PDF"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   },
+   {
+    "label": "akhtarul1984.blogspot.com",
+    "url": "https://akhtarul1984.blogspot.com/2014/05/major-diseases-and-control-measures-of.html"
+   }
+  ],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "QUALITATIVE_ONLY",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "No numeric rule (soil condition). Advise against planting into cold, wet soil.",
+   "Confidence": "Low",
+   "Notes": "Tuber-image class; field weather is weakly linked to the visible symptom."
+  },
+  "spray": {
+   "productClass": "SEED_TREATMENT",
+   "rainFreeHours": "Not applicable",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Potato_Blackleg": {
+  "crop": "Potato",
+  "type": "Disease",
+  "symptoms": "Young plants may be stunted and erect; leaves yellow and roll upward, then plants wilt and die. Black, slimy lesions often extend upward from the seed-tuber area along the stem.",
+  "bn": {
+   "name": "আলুর কাণ্ড পচা (ব্ল্যাকলেগ) রোগ",
+   "symptoms": "গাছ খাটো ও খাড়া, পাতা হলুদ হয়ে উপরে গোটায়; বীজ আলু থেকে কাণ্ড বরাবর কালো পিচ্ছিল পচন।",
+   "advice": "সুস্থ বীজ আলু ব্যবহার করুন, ভেজা মাটি এড়িয়ে চলুন, আক্রান্ত গাছ তুলে ফেলুন। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: No registered product labelled for blackleg found | Cultural/Management: Healthy seed, avoid wet soils, rogue diseased plants, destroy debris; boric acid dip tested for soft rot (same pathogen group).",
+  "products": [],
+  "source": "https://www.banglajol.info/index.php/BJSIR/article/view/32936 ; https://akhtarul1984.blogspot.com/2014/05/major-diseases-and-control-measures-of.html",
+  "links": [
+   {
+    "label": "banglajol.info",
+    "url": "https://www.banglajol.info/index.php/BJSIR/article/view/32936"
+   },
+   {
+    "label": "akhtarul1984.blogspot.com",
+    "url": "https://akhtarul1984.blogspot.com/2014/05/major-diseases-and-control-measures-of.html"
+   }
+  ],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "NONE",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "No rule.",
+   "Confidence": "Not available",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Potato_Blackspot_Bruising": {
+  "crop": "Potato",
+  "type": "Physiological / handling damage",
+  "symptoms": "Internal tuber tissue develops dark grey, black or blue-black discoloration, often near the centre; severe cases may darken much of the tuber.",
+  "bn": {
+   "name": "আলুর কালো দাগ আঘাতজনিত ক্ষত (রোগ নয়)",
+   "symptoms": "আলুর ভেতরের শাঁসে ধূসর-কালো বা নীলচে-কালো দাগ, সাধারণত আঘাতের জায়গায়।",
+   "advice": "এটি রোগ নয়, ওষুধ লাগবে না। আলু তোলা, বাছাই ও পরিবহনে আঘাত এড়িয়ে চলুন।"
+  },
+  "management": "No medicine required (physiological/mechanical impact damage). Practice careful harvesting, gentle grading, and cushioned handling.",
+  "products": [],
+  "source": "Dataset class label — no pesticide applicable",
+  "links": [],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "HANDLING_ADVISORY",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "Not a weather-risk rule. Optional harvest advisory: avoid harvesting/handling when tubers are colder than about 10 °C.",
+   "Confidence": "Medium",
+   "Notes": "Pulp temperature is not the same as air temperature."
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Potato_Brown_Rot": {
+  "crop": "Potato",
+  "type": "Disease",
+  "symptoms": "Typical bacterial brown rot causes wilting; vascular tissue in stems/tubers becomes brown, and milky bacterial ooze may emerge from a cut stem or tuber eye. Confirm with diagnostic testing because symptoms overlap.",
+  "bn": {
+   "name": "আলুর বাদামি পচন / ঢলে পড়া (ব্যাকটেরিয়াল উইল্ট) রোগ",
+   "symptoms": "গাছ ঢলে পড়ে; কাণ্ড ও আলুর ভেতরের শিরা বাদামি হয়, কাটলে দুধের মতো তরল বের হয়।",
+   "advice": "রোগমুক্ত বীজ, শস্য পর্যায়, আক্রান্ত গাছ তুলে ফেলা ও সেচের পানি পরিষ্কার রাখা জরুরি। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: bismerthiazol (Bactroban 20 WP, potato wilt label) | Cultural/Non-chemical: Clean seed, rotation, remove infected plants, manage irrigation water and tools.",
+  "products": [
+   {
+    "brand": "Bactroban 20WP",
+    "registration": "AP-4218",
+    "dose": "1.00 kg (per ha)"
+   }
+  ],
+  "source": "https://agris.fao.org/search/en/records/6473afb696fdec8b71b586eb ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf ; https://akhtarul1984.blogspot.com/2014/05/major-diseases-and-control-measures-of.html",
+  "links": [
+   {
+    "label": "agris.fao.org",
+    "url": "https://agris.fao.org/search/en/records/6473afb696fdec8b71b586eb"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   },
+   {
+    "label": "akhtarul1984.blogspot.com",
+    "url": "https://akhtarul1984.blogspot.com/2014/05/major-diseases-and-control-measures-of.html"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_RH_BAND",
+   "Window": "daily",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": 28.0,
+   "Tmin_hi_C": 30.0,
+   "RHmean_lo_pct": 80.0,
+   "RHmean_hi_pct": 90.0,
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "Tmin BETWEEN 28 AND 30 AND RHmean BETWEEN 80 AND 90",
+   "Confidence": "Medium",
+   "Notes": "Daily Tmin used as night temperature. Such nights are rare in the Rabi potato season, so risk mostly applies to early/late plantings and storage."
+  },
+  "spray": {
+   "productClass": "BACTERICIDE",
+   "rainFreeHours": "Follow label",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Potato_Common_Scab": {
+  "crop": "Potato",
+  "type": "Disease",
+  "symptoms": "Causal agent: Streptomyces scabies. Rough, raised, corky, tan-to-brown circular or coalescing pitted lesions form on the tuber surface, reducing market quality without causing internal wet rot.",
+  "bn": {
+   "name": "আলুর দাদ (কমন স্ক্যাব) রোগ",
+   "symptoms": "আলুর গায়ে খসখসে, উঁচু বা গর্তযুক্ত বাদামি দাগ; ভেতরে পচে না।",
+   "advice": "জৈব সার/মুরগির বিষ্ঠা ব্যবহারে দাদ কমে বলে বাংলাদেশি গবেষণায় উল্লেখ আছে। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: None labelled | Cultural/Management: Poultry manure/organic amendment reported to reduce scab in Bangladesh work cited by the Pertanika paper.",
+  "products": [],
+  "source": "https://ptsldigital.ukm.my/bitstream/123456789/578659/1/ukmvital_116107%2bSource01%2bSource010.PDF ; https://akhtarul1984.blogspot.com/2014/05/major-diseases-and-control-measures-of.html",
+  "links": [
+   {
+    "label": "ptsldigital.ukm.my",
+    "url": "https://ptsldigital.ukm.my/bitstream/123456789/578659/1/ukmvital_116107%2bSource01%2bSource010.PDF"
+   },
+   {
+    "label": "akhtarul1984.blogspot.com",
+    "url": "https://akhtarul1984.blogspot.com/2014/05/major-diseases-and-control-measures-of.html"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_RH_BAND",
+   "Window": "daily",
+   "Active_Months": "",
+   "Tmean_lo_C": 15.0,
+   "Tmean_hi_C": 25.0,
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": 70.0,
+   "RHmean_hi_pct": 90.0,
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": 1.0,
+   "Risk_Logic": "Tmean BETWEEN 15 AND 25 AND RHmean BETWEEN 70 AND 90",
+   "Confidence": "Medium",
+   "Notes": "Scab is also driven by dry soil at tuber initiation and soil pH, which weather data cannot capture."
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Potato_Dry_Rot": {
+  "crop": "Potato",
+  "type": "Disease",
+  "symptoms": "Tuber develops sunken, dark lesions; internal tissue becomes cavity-like. Rot may begin wet and later become dry, firm and shrivelled.",
+  "bn": {
+   "name": "আলুর শুকনা পচা রোগ",
+   "symptoms": "আলুর গায়ে বসে যাওয়া কালচে দাগ, ভেতরে ফাঁপা; পরে আলু শক্ত ও কুঁচকে যায়।",
+   "advice": "সংরক্ষণে আঘাতপ্রাপ্ত আলু বাদ দিন, ঠান্ডা ও শুকনো জায়গায় রাখুন। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: None found | Cultural/Management: NO Bangladesh source found - confirm with Upazila Agriculture Officer / BARI Plant Pathology before using",
+  "products": [],
+  "source": "https://archive.saulibrary.edu.bd/handle/123456789/3455",
+  "links": [
+   {
+    "label": "archive.saulibrary.edu.bd",
+    "url": "https://archive.saulibrary.edu.bd/handle/123456789/3455"
+   }
+  ],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "STORAGE_ONLY",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "Not a field-weather rule. Storage advisory: 15–20 °C with high RH favours dry rot.",
+   "Confidence": "Medium",
+   "Notes": "Use for storage advice only."
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Potato_Healthy_Potatoes": {
+  "crop": "Potato",
+  "type": "Healthy",
+  "symptoms": "No disease symptoms expected; healthy tubers without the target disease signs. Dataset class label only.",
+  "bn": {
+   "name": "সুস্থ আলু",
+   "symptoms": "রোগের লক্ষণ নেই।",
+   "advice": "কোনো ওষুধ লাগবে না।"
+  },
+  "management": "No medicine required",
+  "products": [],
+  "source": "Dataset class label — no pesticide applicable",
+  "links": [],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "NONE",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "None",
+   "Confidence": "Not applicable",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Potato_Miscellaneous": {
+  "crop": "Potato",
+  "type": "Ambiguous / other",
+  "symptoms": "Not yet documented from a sufficiently specific Bangladesh official source reviewed; do not infer from class name.",
+  "bn": {
+   "name": "অন্যান্য / অনির্দিষ্ট সমস্যা (আলু)",
+   "symptoms": "নির্দিষ্ট কোনো রোগ নয়।",
+   "advice": "আগে আসল সমস্যা শনাক্ত করুন; কোনো ওষুধ সুপারিশ করা হচ্ছে না।"
+  },
+  "management": "No medicine required. Cultural practice: Identify the actual problem first",
+  "products": [],
+  "source": "Dataset class label — no pesticide applicable",
+  "links": [],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "NONE",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "None",
+   "Confidence": "Not applicable",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Potato_Pink_Rot": {
+  "crop": "Potato",
+  "type": "Disease",
+  "symptoms": "Causal agent: Phytophthora erythroseptica. Affected tubers feel rubbery and exude clear liquid when squeezed; cut internal flesh turns salmon-pink within 15–30 minutes of air exposure before gradually darkening to brown-black.",
+  "bn": {
+   "name": "আলুর গোলাপি পচা রোগ",
+   "symptoms": "আলু রবারের মতো নরম, চাপ দিলে স্বচ্ছ তরল বের হয়; কাটলে শাঁস ১৫–৩০ মিনিটে গোলাপি হয়।",
+   "advice": "জমিতে পানি জমতে দেবেন না, গরম ও ভেজা অবস্থায় আলু তুলবেন না। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: None found | Cultural/Management: NO Bangladesh source found - confirm with Upazila Agriculture Officer / BARI Plant Pathology before using",
+  "products": [],
+  "source": "No Bangladesh official product registration found in checked sources",
+  "links": [],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "SOIL_WET_PROXY",
+   "Window": "7-day for rain; daily for T",
+   "Active_Months": "",
+   "Tmean_lo_C": 18.3,
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "SOIL_SATURATED",
+   "Consecutive_days": "",
+   "Risk_Logic": "Harvest advisory: Tmean > 18.3 AND soil saturated (proxy: heavy recent rain or Open-Meteo soil_moisture near saturation)",
+   "Confidence": "Low",
+   "Notes": "18.3 °C is a tuber-pulp harvest limit, used here with air temperature as a proxy (assumption). No rain amount defines 'saturated' in the source."
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Potato_Soft_Rot": {
+  "crop": "Potato",
+  "type": "Disease",
+  "symptoms": "Tuber tissue becomes wet, cream-to-tan, soft and separates easily from healthy tissue; foul smell may develop. Blackleg plants may show black slimy stem lesions, yellowing, upward leaf roll and wilt.",
+  "bn": {
+   "name": "আলুর নরম পচা রোগ",
+   "symptoms": "আলুর শাঁস ভেজা, ক্রিম-বাদামি ও নরম হয়ে গলে যায়, দুর্গন্ধ হতে পারে।",
+   "advice": "শুকনো আবহাওয়ায় আলু তুলুন, সাবধানে নাড়াচাড়া করুন, শুকনো ও বাতাস চলাচলযুক্ত স্থানে রাখুন। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: No registered product labelled for soft rot found. Research: boric acid 0.2% tuber dip (30 min) best, then acetic acid, then bleaching powder | Cultural/Management: Handle tubers carefully, harvest in dry weather, store dry and ventilated, destroy debris.",
+  "products": [],
+  "source": "https://www.banglajol.info/index.php/BJSIR/article/view/32936 ; https://archive.saulibrary.edu.bd/handle/123456789/3455 ; https://akhtarul1984.blogspot.com/2014/05/major-diseases-and-control-measures-of.html",
+  "links": [
+   {
+    "label": "banglajol.info",
+    "url": "https://www.banglajol.info/index.php/BJSIR/article/view/32936"
+   },
+   {
+    "label": "archive.saulibrary.edu.bd",
+    "url": "https://archive.saulibrary.edu.bd/handle/123456789/3455"
+   },
+   {
+    "label": "akhtarul1984.blogspot.com",
+    "url": "https://akhtarul1984.blogspot.com/2014/05/major-diseases-and-control-measures-of.html"
+   }
+  ],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "NONE",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "No rule.",
+   "Confidence": "Not available",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Mango_Anthracnose": {
+  "crop": "Mango",
+  "type": "Disease",
+  "symptoms": "Irregular grey-brown to black spots appear on young leaves, shoots, panicles and fruit. Spots may merge; flowers/panicles blacken and die, young fruit may drop, and ripe fruit develops dark sunken spots.",
+  "bn": {
+   "name": "আমের অ্যানথ্রাকনোজ রোগ",
+   "symptoms": "কচি পাতা, মুকুল ও ফলে ধূসর-বাদামি থেকে কালো দাগ; মুকুল কালো হয়ে ঝরে, পাকা ফলে বসা কালো দাগ।",
+   "advice": "মরা ডাল ছাঁটাই ও বাগান পরিষ্কার রাখুন। মুকুল ও গুটি অবস্থায় নিবন্ধিত ছত্রাকনাশক (যেমন ম্যানকোজেব, প্রোপিকোনাজোল) লেবেলের মাত্রায় স্প্রে করুন। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: propiconazole; difenoconazole; azoxystrobin+difenoconazole; tebuconazole+trifloxystrobin; carbendazim; mancozeb; hexaconazole | Cultural/Non-chemical: Pruning, weeding, sanitation; BARI integrated crop management work on anthracnose.",
+  "products": [
+   {
+    "brand": "McZidan 80 WP",
+    "registration": "AP-465",
+    "dose": "2 g/L water"
+   },
+   {
+    "brand": "Tilt 250 EC",
+    "registration": "AP-172",
+    "dose": "0.5 ml/L of water"
+   },
+   {
+    "brand": "Score 250 EC",
+    "registration": "AP-384",
+    "dose": "0.5 ml/L of water"
+   },
+   {
+    "brand": "Amistar Top",
+    "registration": "AP-2312",
+    "dose": "1 ml/L of water"
+   },
+   {
+    "brand": "Nativo 75 WP",
+    "registration": "AP-1502",
+    "dose": "0.5 ml/L of water"
+   },
+   {
+    "brand": "Knowin 50 WP",
+    "registration": "AP-241",
+    "dose": "1 ml/L of water"
+   },
+   {
+    "brand": "Jazz 80 WP",
+    "registration": "AP-2001",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Contaf 5 EC",
+    "registration": "AP-460",
+    "dose": "2 ml/L of water"
+   },
+   {
+    "brand": "Karishma 28 SC",
+    "registration": "AP-2431",
+    "dose": "1200 ml (per ha)"
+   }
+  ],
+  "source": "https://dae.gov.bd/sites/default/files/files/dae.portal.gov.bd/page/8a812db0_3544_4105_b066_df78074d3efb/Registered%20Agricultural%20PesticidesList%20%286%29.pdf ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf ; https://ideas.repec.org/a/ibn/jasjnl/v8y2015i1p205.html ; https://banglajol.info/index.php/JARD/article/view/4430/3646",
+  "links": [
+   {
+    "label": "dae.gov.bd",
+    "url": "https://dae.gov.bd/sites/default/files/files/dae.portal.gov.bd/page/8a812db0_3544_4105_b066_df78074d3efb/Registered%20Agricultural%20PesticidesList%20%286%29.pdf"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   },
+   {
+    "label": "ideas.repec.org",
+    "url": "https://ideas.repec.org/a/ibn/jasjnl/v8y2015i1p205.html"
+   },
+   {
+    "label": "banglajol.info",
+    "url": "https://banglajol.info/index.php/JARD/article/view/4430/3646"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_RH_RAIN",
+   "Window": "7-day (BAMIS standard week)",
+   "Active_Months": "1,2,3,4,5,6,7",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": 34.0,
+   "Tmin_lo_C": 20.0,
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": 95.0,
+   "RHmin_lo_pct": 60.0,
+   "RH90_hours_min": "",
+   "Rain_mm_min": 25.0,
+   "Wet_Condition": "RAIN",
+   "Consecutive_days": "",
+   "Risk_Logic": "7-day mean Tmax < 34 AND 7-day mean Tmin > 20 AND 7-day mean RHmax > 95 AND 7-day mean RHmin > 60 AND rain_7day_mm > 25",
+   "Confidence": "High",
+   "Notes": "Rajshahi region calendar; other regions (Dinajpur, Jessore, Khulna, Rangpur, Rangamati) exist on BAMIS."
+  },
+  "spray": {
+   "productClass": "FUNGICIDE_SYSTEMIC; FUNGICIDE_CONTACT",
+   "rainFreeHours": "24",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Mango_Bacterial_Canker": {
+  "crop": "Mango",
+  "type": "Disease",
+  "symptoms": "Causal agent: Xanthomonas citri pv. mangiferaeindicae. Angular, water-soaked dark brown-to-black leaf spots bounded by veins with yellow haloes; elongated dark cankers split open on twigs/stems with gummy ooze, and star-shaped crater-like lesions form on fruit.",
+  "bn": {
+   "name": "আমের ব্যাকটেরিয়াজনিত ক্যাঙ্কার (কালো দাগ) রোগ",
+   "symptoms": "পাতায় শিরায় আবদ্ধ কৌণিক কালো দাগ ও হলুদ বলয়; ডালে ফাটা ক্ষত ও আঠা; ফলে তারার মতো ফাটা দাগ।",
+   "advice": "নার্সারি পরিষ্কার রাখুন, আক্রান্ত অংশ ছেঁটে ফেলুন, বাতাস প্রতিরোধক বেড়া উপকারী। বাংলাদেশে এই রোগের জন্য নিবন্ধিত কোনো বালাইনাশক পাওয়া যায়নি; নিজে থেকে ওষুধ দেবেন না, উপজেলা কৃষি অফিসার/BARI-র পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: No registered product labelled for mango bacterial disease found. Net-house trial: BAU-biofungicide 2% best; gentamycin, erythromycin, doxycycline, copper sulphate 0.05% also tested | Cultural/Management: Nursery sanitation; BAU-biofungicide in trial.",
+  "products": [],
+  "source": "https://www.banglajol.info/index.php/MH/article/view/23097 ; https://ideas.repec.org/a/ibn/jasjnl/v8y2015i1p205.html",
+  "links": [
+   {
+    "label": "banglajol.info",
+    "url": "https://www.banglajol.info/index.php/MH/article/view/23097"
+   },
+   {
+    "label": "ideas.repec.org",
+    "url": "https://ideas.repec.org/a/ibn/jasjnl/v8y2015i1p205.html"
+   }
+  ],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "QUALITATIVE_ONLY",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "No numeric rule. Show warning after rain with strong wind.",
+   "Confidence": "Low",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Mango_Cutting_Weevil": {
+  "crop": "Mango",
+  "type": "Pest",
+  "symptoms": "Causal pest: Deporaus marginatus. Adult weevils cleanly sever tender young shoots and newly emerged leaves near the petiole, leaving cleanly cut wilted shoots on the ground beneath the tree.",
+  "bn": {
+   "name": "আমের পাতা কাটা উইভিল পোকা",
+   "symptoms": "কচি ডগা ও নতুন পাতা বোঁটার কাছে পরিষ্কারভাবে কাটা থাকে; গাছের নিচে কাটা পাতা পড়ে থাকে।",
+   "advice": "নতুন পাতা আসার সময় কাটা পাতা কুড়িয়ে নষ্ট করুন; BARI গবেষণায় ডগা মশারি/পলিথিনে ঢেকে ভালো ফল পাওয়া গেছে। আমের এই পোকার জন্য নিবন্ধিত কীটনাশক পাওয়া যায়নি।"
+  },
+  "management": "Chemical/Trial status: deltamethrin (Decis), cypermethrin (Ripcord) in BARI trial; growers use lambda-cyhalothrin (Jubar) | Cultural/Management: Bagging shoots with mosquito net or polythene gave 100% reduction in the BARI trial.",
+  "products": [],
+  "source": "https://agris.fao.org/search/en/records/647240e108fd68d5460029c9 ; https://archive.saulibrary.edu.bd/handle/123456789/1525",
+  "links": [
+   {
+    "label": "agris.fao.org",
+    "url": "https://agris.fao.org/search/en/records/647240e108fd68d5460029c9"
+   },
+   {
+    "label": "archive.saulibrary.edu.bd",
+    "url": "https://archive.saulibrary.edu.bd/handle/123456789/1525"
+   }
+  ],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "NONE",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "No rule.",
+   "Confidence": "Not available",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Mango_Gall_Midge": {
+  "crop": "Mango",
+  "type": "Pest",
+  "symptoms": "Causal pest: Gall midge / Apsylla cistellata (shoot gall psyllid). Small raised wart-like galls or conical green-to-brown axillary/apical bud galls form on leaves and shoots, preventing normal panicle emergence and flowering.",
+  "bn": {
+   "name": "আমের গল মাছি / গল পোকা",
+   "symptoms": "পাতা ও ডগায় ছোট উঁচু আঁচিলের মতো বা শঙ্কু আকৃতির সবুজ-বাদামি গল; মুকুল বের হতে পারে না।",
+   "advice": "আক্রান্ত ডগা ছেঁটে নষ্ট করুন, বাগান পরিষ্কার রাখুন। আমের গলের জন্য নিবন্ধিত কীটনাশক পাওয়া যায়নি; উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: Growers use chlorpyrifos (Dursban) for leaf gall; no mango gall label found in PPW list | Cultural/Management: Field sanitation; pheromone traps used for fruit fly (growers survey).",
+  "products": [],
+  "source": "https://archive.saulibrary.edu.bd/handle/123456789/1525 ; https://agris.fao.org/search/en/records/6471bb5b77fd37171a6dacb1",
+  "links": [
+   {
+    "label": "archive.saulibrary.edu.bd",
+    "url": "https://archive.saulibrary.edu.bd/handle/123456789/1525"
+   },
+   {
+    "label": "agris.fao.org",
+    "url": "https://agris.fao.org/search/en/records/6471bb5b77fd37171a6dacb1"
+   }
+  ],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "NONE",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "No rule.",
+   "Confidence": "Not available",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Mango_Healthy": {
+  "crop": "Mango",
+  "type": "Healthy",
+  "symptoms": "No disease symptoms expected; healthy mango leaves, shoots, panicles and fruits without target disease signs. Dataset class label only.",
+  "bn": {
+   "name": "সুস্থ আম গাছ",
+   "symptoms": "রোগের লক্ষণ নেই।",
+   "advice": "কোনো ওষুধ লাগবে না; নিয়মিত পর্যবেক্ষণ করুন।"
+  },
+  "management": "No medicine required",
+  "products": [],
+  "source": "Dataset class label — no pesticide applicable",
+  "links": [],
+  "rule": {
+   "Applicable": "FALSE",
+   "Model": "NONE",
+   "Window": "",
+   "Active_Months": "",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "None",
+   "Confidence": "Not applicable",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ },
+ "Mango_Powdery_Mildew": {
+  "crop": "Mango",
+  "type": "Disease",
+  "symptoms": "White powder-like fungal growth appears on leaves and flower panicles; affected panicles may dry and drop, reducing fruit set.",
+  "bn": {
+   "name": "আমের পাউডারি মিলডিউ রোগ",
+   "symptoms": "পাতা ও মুকুলে সাদা পাউডারের মতো ছত্রাক; মুকুল শুকিয়ে ঝরে যায়, গুটি কম ধরে।",
+   "advice": "মুকুল আসার সময় নজর রাখুন। প্রয়োজনে নিবন্ধিত সালফার বা হেক্সাকোনাজোল জাতীয় ছত্রাকনাশক লেবেলের মাত্রায় স্প্রে করুন। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: wettable sulphur; hexaconazole; propiconazole; mancozeb (+metalaxyl) | Cultural/Non-chemical: BAU trial: Dithane M-45, BAU-Biofungicide, Bavistin reduced mildew.",
+  "products": [
+   {
+    "brand": "Wonderful 80 WG",
+    "registration": "AP-1672",
+    "dose": "2 g/L water"
+   },
+   {
+    "brand": "Shaheen 80 WP",
+    "registration": "AP-1673",
+    "dose": "2 g/L water"
+   },
+   {
+    "brand": "Green Sulphur 80 WP",
+    "registration": "AP-1674",
+    "dose": "2 g/L water"
+   },
+   {
+    "brand": "Sulphin 80 WG",
+    "registration": "AP-1707",
+    "dose": "2 g/L water"
+   },
+   {
+    "brand": "Surya 80 WDG",
+    "registration": "AP-2078",
+    "dose": "2 g/L water"
+   },
+   {
+    "brand": "Nanthion 80 DF",
+    "registration": "AP-887",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Microvit 80 WG",
+    "registration": "AP-987",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Contaf 5 EC",
+    "registration": "AP-460",
+    "dose": "2 ml/L of water"
+   },
+   {
+    "brand": "Suprazol 25 EC",
+    "registration": "AP-1359",
+    "dose": "0.5 ml/L of water"
+   },
+   {
+    "brand": "Indofil M 45",
+    "registration": "AP-272",
+    "dose": "2 g/L of water"
+   },
+   {
+    "brand": "Haymaxyl MZ 72 WP",
+    "registration": "AP-611",
+    "dose": "2 g/L of water"
+   }
+  ],
+  "source": "https://dae.gov.bd/sites/default/files/files/dae.portal.gov.bd/page/8a812db0_3544_4105_b066_df78074d3efb/Registered%20Agricultural%20PesticidesList%20%286%29.pdf ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf ; https://ideas.repec.org/a/ibn/jasjnl/v8y2015i1p205.html",
+  "links": [
+   {
+    "label": "dae.gov.bd",
+    "url": "https://dae.gov.bd/sites/default/files/files/dae.portal.gov.bd/page/8a812db0_3544_4105_b066_df78074d3efb/Registered%20Agricultural%20PesticidesList%20%286%29.pdf"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   },
+   {
+    "label": "ideas.repec.org",
+    "url": "https://ideas.repec.org/a/ibn/jasjnl/v8y2015i1p205.html"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_RH_RAIN",
+   "Window": "7-day (BAMIS standard week)",
+   "Active_Months": "1,2,3,4,5,6,7",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": 37.0,
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": 24.0,
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": 90.0,
+   "RHmin_lo_pct": 40.0,
+   "RH90_hours_min": "",
+   "Rain_mm_min": 17.0,
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "7-day mean Tmax > 37 AND 7-day mean Tmin < 24 AND 7-day mean RHmax > 90 AND 7-day mean RHmin > 40 AND rain_7day_mm > 17",
+   "Confidence": "Low",
+   "Notes": "The BAMIS PDF uses a legacy Bangla font; the >37 °C value and the rain condition look unusual for powdery mildew (flowering is Jan–Mar). Check the printed PDF before relying on this rule."
+  },
+  "spray": {
+   "productClass": "FUNGICIDE_CONTACT; FUNGICIDE_SYSTEMIC; FUNGICIDE_MIXED_CONTACT_SYSTEMIC",
+   "rainFreeHours": "24",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Mango_Sooty_Mould": {
+  "crop": "Mango",
+  "type": "Disease / fungal growth",
+  "symptoms": "Causal agent: Sooty mould fungi (Capnodium / Meliola spp.) growing superficially on honeydew excreted by mango hoppers/scale insects. A velvety black fungal coating covers upper leaf surfaces, twigs, and fruits, blocking sunlight and photosynthesis.",
+  "bn": {
+   "name": "আমের শুটি মোল্ড (ঝুল) রোগ",
+   "symptoms": "পাতা, ডাল ও ফলের উপরে কালো মখমলের মতো আস্তরণ, যা হপার পোকার মধুরসের উপর জন্মায়।",
+   "advice": "মূল কারণ হপার পোকা দমন করুন (নিবন্ধিত কীটনাশক হপারের জন্য, ঝুলের জন্য নয়)। প্রয়োগের আগে প্যাকেটের অনুমোদিত লেবেল ও উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical options: Control the hoppers: carbaryl, deltamethrin, lambda-cyhalothrin, cypermethrin, imidacloprid (labelled for mango hopper, not for sooty mould) | Cultural/Non-chemical: BAU-Biofungicide controlled sooty mould in nursery trial.",
+  "products": [
+   {
+    "brand": "Sevin 85 WP",
+    "registration": "AP-338",
+    "dose": "1.70 kg (per ha)"
+   },
+   {
+    "brand": "Decis 2.5 EC",
+    "registration": "AP-317",
+    "dose": "1 ml/L of water"
+   },
+   {
+    "brand": "Karate 2.5 EC",
+    "registration": "AP-263",
+    "dose": "1 ml/L of water"
+   },
+   {
+    "brand": "Basathrin 10 EC",
+    "registration": "AP-162",
+    "dose": "1 ml/L of water"
+   },
+   {
+    "brand": "Bumper 20 SL",
+    "registration": "AP-958",
+    "dose": "0.5 ml/L of water"
+   }
+  ],
+  "source": "https://ideas.repec.org/a/ibn/jasjnl/v8y2015i1p205.html ; https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf",
+  "links": [
+   {
+    "label": "ideas.repec.org",
+    "url": "https://ideas.repec.org/a/ibn/jasjnl/v8y2015i1p205.html"
+   },
+   {
+    "label": "bamis.gov.bd",
+    "url": "https://www.bamis.gov.bd/res/public/pages/2019/04/05/19.pdf"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "SEASON_WINDOW",
+   "Window": "calendar",
+   "Active_Months": "1,2,3,4,5,6",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": "",
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": "",
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": "",
+   "RHmin_lo_pct": "",
+   "RH90_hours_min": "",
+   "Rain_mm_min": "",
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "Month BETWEEN Jan AND Jun -> show hopper-monitoring advice (season flag, not a weather risk)",
+   "Confidence": "Medium",
+   "Notes": ""
+  },
+  "spray": {
+   "productClass": "INSECTICIDE_CARBAMATE; INSECTICIDE_PYRETHROID; INSECTICIDE_NEONICOTINOID",
+   "rainFreeHours": "24",
+   "windMin": 5.0,
+   "windMax": 16.0
+  }
+ },
+ "Mango_die_back": {
+  "crop": "Mango",
+  "type": "Disease / symptom complex",
+  "symptoms": "Causal agent: Lasiodiplodia / Botryodiplodia spp. Twigs and branches dry and die progressively from the tip downward; leaves turn brown and roll upward, bark darkens with gum exudation, and internal wood shows brown vascular discoloration.",
+  "bn": {
+   "name": "আমের আগা মরা (ডাই ব্যাক) রোগ",
+   "symptoms": "ডালের আগা থেকে নিচের দিকে শুকিয়ে মরে যায়; পাতা বাদামি, ছালে আঠা ও কাঠের ভেতর বাদামি।",
+   "advice": "আক্রান্ত ডাল সুস্থ অংশসহ কেটে পুড়িয়ে ফেলুন। আমের আগা মরার জন্য নিবন্ধিত বালাইনাশক পাওয়া যায়নি; উপজেলা কৃষি অফিসারের পরামর্শ নিন।"
+  },
+  "management": "Chemical/Trial status: No registered mango die-back label found (registered 'die back' labels are for tea) | Cultural/Management: BAU-Biofungicide gave good control in the nursery trial; prune and burn dead wood.",
+  "products": [],
+  "source": "https://ideas.repec.org/a/ibn/jasjnl/v8y2015i1p205.html",
+  "links": [
+   {
+    "label": "ideas.repec.org",
+    "url": "https://ideas.repec.org/a/ibn/jasjnl/v8y2015i1p205.html"
+   }
+  ],
+  "rule": {
+   "Applicable": "TRUE",
+   "Model": "TEMP_RH_RAIN",
+   "Window": "7-day (BAMIS standard week)",
+   "Active_Months": "1,2,3,4,5,6,7",
+   "Tmean_lo_C": "",
+   "Tmean_hi_C": "",
+   "Tmax_lo_C": 34.0,
+   "Tmax_hi_C": "",
+   "Tmin_lo_C": "",
+   "Tmin_hi_C": 18.0,
+   "RHmean_lo_pct": "",
+   "RHmean_hi_pct": "",
+   "RHmax_lo_pct": 87.0,
+   "RHmin_lo_pct": 30.0,
+   "RH90_hours_min": "",
+   "Rain_mm_min": 6.0,
+   "Wet_Condition": "",
+   "Consecutive_days": "",
+   "Risk_Logic": "7-day mean Tmax > 34 AND 7-day mean Tmin < 18 AND 7-day mean RHmax > 87 AND 7-day mean RHmin > 30 AND rain_7day_mm > 6",
+   "Confidence": "Medium",
+   "Notes": "Legacy-font PDF; values read by text extraction. Verify against the printed calendar."
+  },
+  "spray": {
+   "productClass": "NONE",
+   "rainFreeHours": "",
+   "windMin": null,
+   "windMax": null
+  }
+ }
+}

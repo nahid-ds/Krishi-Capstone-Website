@@ -1,0 +1,147 @@
+<!doctype html>
+<!-- index.html - the page structure only. Words come from js/i18n.js (data-t="key"), looks from css/style.css,
+     and everything that moves from js/app.js. -->
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1d5c3a">
+  <meta name="description" content="কৃষি ডাক্তার: ধান, আলু, টমেটো ও আমের রোগ ছবি দেখে চেনার সহায়ক।">
+  <title>কৃষি ডাক্তার</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d5c3a'/%3E%3Cpath d='M18 46c0-16 11-27 29-29-2 18-13 29-29 29z' fill='%23f3c64b'/%3E%3C/svg%3E">
+  <!-- Fonts: Anek Bangla for headings, Noto Sans Bengali for text (both have Bangla and English letters).
+       Without internet the phone's own Bangla font is used instead (see css/style.css). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@600;700&family=Noto+Sans+Bengali:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Icons: each one is drawn once here and reused by name, for example <svg class="i"><use href="#i-camera"></use></svg>.
+     Simple line drawings on a 24 x 24 grid (in the style of the free Feather icon set). Colour and size come from css/style.css. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-todo" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+  <symbol id="i-wind" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="top-inner">
+    <span class="logo">
+      <svg class="logo-mark" viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
+        <rect width="64" height="64" rx="16" fill="#1d5c3a"/>
+        <path d="M18 46c0-16 11-27 29-29-2 18-13 29-29 29z" fill="#f3c64b"/>
+        <path d="M18 46c7-7 14-13 22-20" stroke="#1d5c3a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text">
+        <b data-t="app_name">কৃষি ডাক্তার</b>
+        <small data-t="app_tag"></small>
+      </span>
+    </span>
+    <!-- One button, two labels: style.css highlights the one that matches <html lang="...">. -->
+    <button type="button" class="lang" data-action="lang" aria-label="Language / ভাষা">
+      <span lang="bn">বাংলা</span><span lang="en">EN</span>
+    </button>
+  </div>
+</header>
+
+<div class="app">
+
+  <!-- Shown only if the app could not start: app.js failed to load (onerror below) or the data files failed (app.js). -->
+  <p id="start-error" class="alert bad" hidden>অ্যাপ চালু হয়নি। ইন্টারনেট দেখে পাতাটি আবার খুলুন।<br>
+    The app could not start. Check the internet and reload. (On a laptop: open it with Live Server, see README.md.)</p>
+  <p id="demo-banner" class="alert warn" data-t="demo_banner" hidden></p>
+
+  <!-- ================= Screen 1: home (3 steps) ================= -->
+  <main id="home">
+    <h1 class="hero" data-t="hero_title"></h1>
+    <p class="hero-sub" data-t="hero_sub"></p>
+
+    <section id="step-crop" class="step card">
+      <h2><span class="number" data-t="n1">1</span> <span data-t="step_crop"></span></h2>
+      <div id="crops" class="crops"></div>
+    </section>
+
+    <section id="step-photo" class="step card">
+      <h2><span class="number" data-t="n2">2</span> <span data-t="step_photo"></span></h2>
+      <!-- capture="environment" opens the back camera on a phone; the second input opens the gallery. -->
+      <input id="camera" type="file" accept="image/*" capture="environment">
+      <input id="gallery" type="file" accept="image/*">
+      <label for="camera" class="photo-box">
+        <span id="photo-empty"><svg class="i big-icon" aria-hidden="true"><use href="#i-camera"></use></svg><span data-t="photo_tap"></span></span>
+        <img id="photo-preview" alt="" hidden>
+      </label>
+      <div class="row">
+        <label for="camera" class="btn"><svg class="i" aria-hidden="true"><use href="#i-camera"></use></svg> <span data-t="take_photo"></span></label>
+        <label for="gallery" class="btn"><svg class="i" aria-hidden="true"><use href="#i-image"></use></svg> <span data-t="from_gallery"></span></label>
+      </div>
+      <div id="photo-message"></div>
+      <div id="tips" class="tips"></div>
+    </section>
+
+    <section id="step-area" class="step card">
+      <h2><span class="number" data-t="n3">3</span> <span data-t="step_area"></span> <small data-t="optional"></small></h2>
+      <button type="button" class="btn wide" data-action="gps"><svg class="i" aria-hidden="true"><use href="#i-pin"></use></svg> <span data-t="use_gps"></span></button>
+      <p class="note center" data-t="or_district"></p>
+      <select id="district" aria-label="জেলা / District"></select>
+      <p id="place-status" class="note"></p>
+      <!-- Small OpenStreetMap map with a pin at the GPS point. Shown only when online (see ui.js renderPlace). -->
+      <iframe id="place-map" class="place-map" title="map" loading="lazy" hidden></iframe>
+    </section>
+
+    <footer class="foot">
+      <p id="model-status" class="note"></p>
+      <p class="note"><svg class="i" aria-hidden="true"><use href="#i-lock"></use></svg> <span data-t="privacy"></span></p>
+      <!-- Shown only when CONFIG.FEEDBACK_URL is set (a Google Form link). -->
+      <a id="feedback" class="btn wide" target="_blank" rel="noopener" hidden><svg class="i" aria-hidden="true"><use href="#i-chat"></use></svg> <span data-t="feedback"></span></a>
+    </footer>
+  </main>
+
+  <!-- ================= Screen 2: checking ================= -->
+  <main id="checking" class="checking" hidden>
+    <img id="checking-photo" alt="">
+    <ul id="checking-steps" class="steps"></ul>
+    <p id="checking-note" class="note"></p>
+  </main>
+
+  <!-- ================= Screen 3: result (filled by ui.js) ================= -->
+  <main id="result" hidden></main>
+
+  <!-- ================= Screen 4: history ================= -->
+  <main id="history" hidden>
+    <h1 class="hero" data-t="history"></h1>
+    <input id="search" type="search" data-t-placeholder="search" aria-label="search">
+    <div id="chips" class="chips"></div>
+    <div id="history-list"></div>
+    <button type="button" id="delete-all" class="btn link danger" data-action="delete-all"></button>
+  </main>
+</div>
+
+<!-- The big "next step" button on the home screen. -->
+<div id="actionbar" class="actionbar">
+  <button type="button" id="next" class="btn primary big" data-action="next"></button>
+</div>
+
+<nav class="bottom">
+  <div>
+    <button type="button" data-action="nav" data-screen="home"><svg class="i" aria-hidden="true"><use href="#i-home"></use></svg><span data-t="nav_home"></span></button>
+    <button type="button" data-action="nav" data-screen="history"><svg class="i" aria-hidden="true"><use href="#i-clock"></use></svg><span data-t="nav_history"></span></button>
+    <a href="tel:16123"><svg class="i" aria-hidden="true"><use href="#i-phone"></use></svg><span data-t="nav_call"></span></a>
+  </div>
+</nav>
+
+<script type="module" src="js/app.js" onerror="document.getElementById('start-error').hidden = false"></script>
+</body>
+</html>

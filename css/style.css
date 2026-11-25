@@ -1,0 +1,269 @@
+/* style.css - the look of the website.
+   1. Design tokens: colours, fonts, type sizes, spacing, corners (change the look here)
+   2. Page, header and icons
+   3. Home screen
+   4. Buttons, inputs, messages, cards
+   5. Checking, result, history screens
+   6. Fixed bars at the bottom
+   7. Laptop screens and short phones
+   Phone first: everything is designed for a 360 px wide screen (and checked at 320 px), then widened for laptops. */
+
+/* ================= 1. Design tokens ================= */
+:root {
+  /* Colours. Deep paddy green for actions, mustard-flower yellow as the one accent, brick red for disease.
+     Dark ink on a light warm-grey page: high contrast, so it reads outdoors in sunlight. */
+  --page: #f5f3ee;          /* page background */
+  --surface: #ffffff;       /* cards, header, inputs */
+  --fill: #edeae2;          /* soft fills: chips, bars, step numbers */
+  --ink: #17211a;           /* main text (contrast 15:1 on the page) */
+  --muted: #586159;         /* secondary text (contrast 6:1) */
+  --line: #d9d5ca;          /* borders */
+  --brand: #1d5c3a;         /* paddy green: main buttons, selected items */
+  --brand-dark: #144429;    /* main button when pressed */
+  --brand-soft: #e4eee6;    /* selected crop background */
+  --on-brand: #ffffff;      /* text on green */
+  --accent: #e0a526;        /* mustard: focus ring and small marks */
+  --good: #2b7a45; --good-soft: #e5f2e8;
+  --warn: #9b5d00; --warn-soft: #fcf0d6;
+  --bad: #b2362a;  --bad-soft: #fbe7e4;
+
+  /* Fonts: two families only. Headings in Anek Bangla, text in Noto Sans Bengali (both include English letters).
+     If they cannot load, the phone's own Bangla font is used. */
+  --font-head: "Anek Bangla", "Noto Sans Bengali", system-ui, sans-serif;
+  --font-text: "Noto Sans Bengali", "Hind Siliguri", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Type sizes (body text is 17 px, large enough for older eyes). */
+  --text-sm: .875rem;       /* 15 px: notes, small print */
+  --text-md: 1rem;          /* 17 px: body, buttons */
+  --text-lg: 1.15rem;       /* card titles */
+  --text-xl: 1.6rem;        /* page title, result name */
+
+  /* Spacing scale: every gap and padding is one of these. */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px;
+
+  /* Corners: small and the same everywhere, so the page looks calm and printed, not bubbly. */
+  --radius: 12px;           /* cards */
+  --radius-sm: 10px;        /* buttons, inputs, crop tiles */
+  --touch: 48px;            /* smallest height of anything you tap */
+  color-scheme: light;
+}
+
+/* Dark mode follows the phone setting: only the colours change. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #121713; --surface: #1a211c; --fill: #263029; --ink: #ebe9e1; --muted: #a8b1a8; --line: #333d35;
+    --brand: #7cc596; --brand-dark: #9ad4ae; --brand-soft: #1f3527; --on-brand: #0d1a12; --accent: #f0c048;
+    --good: #86cc9a; --good-soft: #1c3223; --warn: #edb75d; --warn-soft: #382c15; --bad: #f08c80; --bad-soft: #3b201c;
+    color-scheme: dark;
+  }
+}
+
+/* ================= 2. Page, header and icons ================= */
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+html { font-size: 17px; }               /* 1rem = 17 px */
+body { background: var(--page); color: var(--ink); font: var(--text-md)/1.6 var(--font-text); -webkit-text-size-adjust: 100%; }
+[hidden] { display: none !important; }
+h1, h2, h3 { font-family: var(--font-head); font-weight: 700; line-height: 1.25; letter-spacing: -.005em; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }   /* visible focus for keyboard users */
+
+/* Icons from the set in index.html: they take the colour of the text around them. */
+.i { width: 1.2em; height: 1.2em; flex: none; vertical-align: -.22em;
+     fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.app { max-width: 560px; margin: 0 auto; padding: 0 var(--s4) 150px; }    /* bottom space for the fixed bars */
+
+header.top { position: sticky; top: 0; z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line); }
+header.top::after { content: ""; display: block; height: 3px; background: var(--accent); }   /* thin mustard line */
+.top-inner { max-width: 560px; margin: 0 auto; padding: var(--s2) var(--s4); display: flex; align-items: center; gap: var(--s3); }
+.logo { flex: 1; min-width: 0; display: flex; align-items: center; gap: var(--s2); }
+.logo-text { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+.logo-text b { font: 700 1.25rem var(--font-head); color: var(--brand); }
+.logo-text small { font-size: .75rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Language switch: one button, both languages shown; the active one is filled green. */
+.lang {
+  flex: none; display: flex; padding: 3px; min-height: 44px; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--page);
+}
+.lang span { display: grid; place-items: center; padding: 0 var(--s3); border-radius: 999px; color: var(--muted); font: 600 .85rem var(--font-text); }
+html[lang="bn"] .lang span[lang="bn"], html[lang="en"] .lang span[lang="en"] { background: var(--brand); color: var(--on-brand); }
+
+.hero { font-size: var(--text-xl); margin: var(--s5) 0 var(--s1); }
+.hero-sub { margin: 0 0 var(--s4); color: var(--muted); }
+
+/* ================= 3. Home screen ================= */
+.step h2 { display: flex; align-items: center; gap: var(--s3); font-size: var(--text-lg); margin: 0 0 var(--s4); }
+.step h2 small { font: 400 var(--text-sm) var(--font-text); color: var(--muted); }
+.number {
+  flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
+  border: 1.5px solid var(--ink); color: var(--ink); font: 700 .95rem var(--font-head);
+}
+.step.done .number { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+
+.crops { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); }
+.crop {
+  position: relative; display: flex; align-items: center; gap: var(--s3);
+  min-height: 64px; padding: var(--s2) var(--s3); cursor: pointer; text-align: left;
+  border: 1.5px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink);
+  font: 600 var(--text-md) var(--font-text);
+}
+.crop-pic { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--fill); font-size: 1.55rem; line-height: 1; }
+.crop[aria-pressed="true"] { border: 2px solid var(--brand); background: var(--brand-soft); }
+.crop[aria-pressed="true"] .crop-pic { background: var(--surface); }
+.crop[aria-pressed="true"]::after {                 /* small tick in the corner of the chosen crop */
+  content: "✓"; position: absolute; top: -8px; right: -8px; width: 24px; height: 24px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--brand); color: var(--on-brand); font-size: .8rem; font-weight: 700;
+  border: 2px solid var(--surface);
+}
+
+input[type=file] { display: none; }
+.photo-box {
+  display: grid; place-items: center; min-height: 150px; overflow: hidden; cursor: pointer; text-align: center;
+  border: 2px dashed var(--line); border-radius: var(--radius-sm); background: var(--page); color: var(--muted);
+}
+.photo-box img { display: block; width: 100%; max-height: 300px; object-fit: contain; background: var(--fill); }
+#photo-empty { display: flex; flex-direction: column; align-items: center; gap: var(--s2); padding: var(--s4); }
+.big-icon { width: 36px; height: 36px; stroke-width: 1.6; color: var(--brand); }
+
+.tips { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2); margin-top: var(--s4); font-size: var(--text-sm); }
+.tips-title { width: 100%; color: var(--muted); }
+.tip { padding: 2px var(--s3); border-radius: 999px; background: var(--fill); }
+
+.center { text-align: center; }
+.place-map { display: block; width: 100%; height: 180px; margin-top: var(--s3); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.foot { margin-top: var(--s5); }
+
+/* ================= 4. Buttons, inputs, messages, cards ================= */
+.row { display: flex; flex-wrap: wrap; gap: var(--s3); margin-top: var(--s3); }
+.row > * { flex: 1 1 130px; }
+
+/* Buttons: one height, one corner, one weight. Main = filled green. Normal = white with a border. Link = text only. */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--s2);
+  min-height: var(--touch); padding: var(--s2) var(--s4); cursor: pointer; text-align: center; text-decoration: none;
+  border: 1.5px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink);
+  font: 600 var(--text-md)/1.3 var(--font-text);
+}
+.btn:active { transform: translateY(1px); }
+.btn:disabled { cursor: wait; opacity: .6; }
+.btn.primary { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+.btn.primary:active { background: var(--brand-dark); }
+.btn.ghost { background: var(--surface); border: 2px solid var(--brand); color: var(--brand); }
+.btn.big { display: flex; width: 100%; min-height: 52px; font-size: 1.05rem; margin-top: var(--s3); }
+.btn.wide { display: flex; width: 100%; margin-top: var(--s3); }
+.btn.link { border: none; background: none; min-height: 44px; padding: var(--s1) 0; color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
+.btn.danger { color: var(--bad); }
+
+/* Inputs: same height and corner as the buttons. */
+select, input[type=search] {
+  width: 100%; min-height: var(--touch); padding: var(--s2) var(--s3);
+  border: 1.5px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink);
+  font: var(--text-md) var(--font-text);
+}
+select:focus, input[type=search]:focus { border-color: var(--brand); outline: 3px solid color-mix(in srgb, var(--accent) 50%, transparent); }
+
+.note { color: var(--muted); font-size: var(--text-sm); margin: var(--s2) 0 0; }
+.model.missing, .model.failed { color: var(--warn); font-weight: 600; }
+.model.ready { color: var(--good); }
+.alert { margin: var(--s3) 0 0; padding: var(--s3); border-radius: var(--radius-sm); font-size: .95rem; border-left: 4px solid; }
+.alert.ok { background: var(--good-soft); border-color: var(--good); }
+.alert.warn { background: var(--warn-soft); border-color: var(--warn); }
+.alert.bad { background: var(--bad-soft); border-color: var(--bad); }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s4); margin: var(--s4) 0; }
+.card h3 { display: flex; align-items: center; gap: var(--s2); font-size: var(--text-lg); margin: 0 0 var(--s2); }
+.card h3 .i { color: var(--brand); }
+.card p { margin: var(--s2) 0; }
+.small { font-size: var(--text-sm); color: var(--muted); }
+.tag { display: inline-block; padding: 2px var(--s3); border-radius: 999px; background: var(--fill); font-size: var(--text-sm); font-weight: 600; }
+.tag.good { background: var(--good-soft); color: var(--good); }
+.tag.warn { background: var(--warn-soft); color: var(--warn); }
+.tag.bad { background: var(--bad-soft); color: var(--bad); }
+
+/* ================= 5. Checking, result, history ================= */
+.checking { text-align: center; padding: var(--s6) 0; }
+.checking img { width: 140px; height: 140px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
+.steps { list-style: none; max-width: 300px; margin: var(--s5) auto var(--s3); padding: 0; text-align: left; }
+.steps li { display: flex; align-items: center; gap: var(--s3); padding: var(--s2) 0; color: var(--muted); }
+.steps li::before { content: ""; flex: none; width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--line); }
+.steps li.active, .steps li.done { color: var(--ink); }
+.steps li.active::before { border-color: var(--brand); border-top-color: transparent; animation: spin 1s linear infinite; }
+.steps li.done::before { background: var(--brand); border-color: var(--brand); }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* The answer card: a coloured bar on the left says what kind of answer it is (red disease, green healthy, yellow not sure). */
+.answer { margin: var(--s4) 0; padding: var(--s4) var(--s4) var(--s4) var(--s5); border-radius: var(--radius); border: 1px solid var(--line); border-left: 8px solid var(--bad); background: var(--surface); }
+.answer.healthy { border-left-color: var(--good); background: var(--good-soft); }
+.answer.notsure { border-left-color: var(--accent); background: var(--warn-soft); }
+.answer .label { margin: 0 0 var(--s1); font-size: var(--text-sm); color: var(--muted); }
+.answer .name { font: 700 var(--text-xl)/1.25 var(--font-head); margin: 0; }
+.answer .name + p { margin-bottom: 0; }
+.answer .meta { display: flex; flex-wrap: wrap; gap: var(--s2); margin-top: var(--s3); }
+.product { border-top: 1px solid var(--line); padding: var(--s3) 0 var(--s1); }
+details.more > summary { padding: var(--s3) 0 var(--s1); color: var(--brand); font-weight: 600; cursor: pointer; }
+.windows { display: flex; flex-wrap: wrap; gap: var(--s2); margin: var(--s1) 0 var(--s2); }
+.windows span { padding: var(--s1) var(--s3); border: 1px solid var(--good); border-radius: var(--radius-sm); color: var(--good); font-weight: 600; font-size: var(--text-sm); }
+.bar { height: 8px; margin: var(--s1) 0 var(--s3); border-radius: 4px; background: var(--fill); overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--brand); }
+.source a { color: var(--brand); word-break: break-all; }
+details.box { margin: var(--s4) 0; padding: 0 var(--s4); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+details.box > summary { min-height: var(--touch); display: flex; align-items: center; font-weight: 600; cursor: pointer; }
+details.box > summary::after { content: "+"; margin-left: auto; font-size: 1.3rem; color: var(--brand); }   /* + when closed */
+details.box[open] > summary::after { content: "−"; }                                                       /* − when open */
+details.box > div { padding-bottom: var(--s4); }
+details.box h3 { font-size: var(--text-md); margin: var(--s4) 0 var(--s2); }
+.saved { text-align: center; }
+
+#search { margin-top: var(--s2); }
+.chips { display: flex; gap: var(--s2); overflow-x: auto; padding: var(--s3) 0 var(--s1); }
+.chip {
+  white-space: nowrap; padding: var(--s1) var(--s3); min-height: 40px; cursor: pointer;
+  border: 1.5px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); font: 600 var(--text-sm) var(--font-text);
+}
+.chip[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+.history-item {
+  display: flex; align-items: center; gap: var(--s3); margin: var(--s3) 0; padding: var(--s2) var(--s2) var(--s2) var(--s3); cursor: pointer;
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface);
+}
+.history-item img { flex: none; width: 56px; height: 56px; border-radius: 8px; object-fit: cover; }
+.history-item .text { flex: 1; min-width: 0; }
+.history-item b { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.history-item span { font-size: var(--text-sm); color: var(--muted); }
+.delete { flex: none; display: grid; place-items: center; border: none; border-radius: var(--radius-sm); background: none; color: var(--muted); min-width: 44px; min-height: 44px; cursor: pointer; font: 600 var(--text-sm) var(--font-text); }
+.delete.sure { background: var(--bad); color: #fff; padding: 0 var(--s3); }   /* second tap deletes */
+.empty { text-align: center; color: var(--muted); padding: var(--s6) var(--s3); }
+
+/* ================= 6. Fixed bars at the bottom ================= */
+.actionbar { position: fixed; left: 0; right: 0; bottom: 60px; z-index: 5; padding: var(--s2) var(--s4); background: var(--page); border-top: 1px solid var(--line); }
+.actionbar .btn.big { max-width: 528px; margin: 0 auto; }
+nav.bottom { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; background: var(--surface); border-top: 1px solid var(--line); }
+nav.bottom div { display: flex; max-width: 560px; margin: 0 auto; }
+nav.bottom button, nav.bottom a {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: 60px;
+  border: none; background: none; color: var(--muted); font: 600 .8rem var(--font-text); text-decoration: none; cursor: pointer;
+}
+nav.bottom .i { width: 22px; height: 22px; }
+nav.bottom [aria-current="page"] { color: var(--brand); box-shadow: inset 0 3px 0 var(--brand); }
+/* While typing in the History search, hide the bottom menu (some Android phones push it up above the keyboard). */
+body:has(#search:focus) nav.bottom { display: none; }
+
+/* ================= 7. Laptop screens and short phones ================= */
+@media (min-width: 720px) {
+  .app, .top-inner { max-width: 640px; }
+  .hero { font-size: 2rem; margin-top: var(--s6); }
+  .crops { grid-template-columns: repeat(4, 1fr); }   /* 4 crops in one row */
+  .crop { flex-direction: column; justify-content: center; text-align: center; min-height: 104px; }
+  .actionbar .btn.big { max-width: 608px; }
+  nav.bottom div { max-width: 640px; }
+}
+/* Very narrow phones (320 px): hide the small line under the app name so the header stays on one row. */
+@media (max-width: 359px) {
+  .logo-text small { display: none; }
+}
+/* Short phones (for example iPhone SE): smaller bottom bars, so more of the page is visible. */
+@media (max-height: 620px) {
+  .actionbar { bottom: 52px; padding: 6px var(--s4); }
+  .actionbar .btn.big { min-height: var(--touch); }
+  nav.bottom button, nav.bottom a { height: 52px; }
+}
